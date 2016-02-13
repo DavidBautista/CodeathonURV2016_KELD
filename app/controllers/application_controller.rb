@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  layout Proc.new { |controller| controller.devise_controller? ? 'application' : 'game' }
   protect_from_forgery with: :exception
   before_action :authenticate_user!
 

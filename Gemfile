@@ -29,6 +29,12 @@ gem 'bootstrap-daterangepicker-rails'
 gem 'devise', '3.4.1'
 gem 'devise-i18n'
 gem 'devise-bootstrap-views'
+
+gem 'gettext', '>=3.0.2'
+gem 'fast_gettext'
+gem 'rails-i18n'
+gem 'gettext_i18n_rails'
+
 # Use ActiveModel has_secure_password
 # Use Unicorn as the app server
 # gem 'unicorn'

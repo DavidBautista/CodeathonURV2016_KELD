@@ -14,7 +14,8 @@ class QuestionsController < ApplicationController
 
   # GET /questions/new
   def new
-    @question = Question.new
+    @exam = Exam.find(params[:exam_id])
+    @question = Question.new(exam_id: params[:exam_id])
   end
 
   # GET /questions/1/edit
@@ -25,40 +26,32 @@ class QuestionsController < ApplicationController
   # POST /questions.json
   def create
     @question = Question.new(question_params)
-
-    respond_to do |format|
-      if @question.save
-        format.html { redirect_to @question, notice: 'Question was successfully created.' }
-        format.json { render :show, status: :created, location: @question }
-      else
-        format.html { render :new }
-        format.json { render json: @question.errors, status: :unprocessable_entity }
-      end
+    @question.sender = current_user
+    if @question.save
+      redirect_to overview_exam_path(@question.exam), notice: _('Question was successfully sent.')
+    else
+      @exam = question.exam
+      render :new
     end
   end
 
   # PATCH/PUT /questions/1
   # PATCH/PUT /questions/1.json
   def update
-    respond_to do |format|
-      if @question.update(question_params)
-        format.html { redirect_to @question, notice: 'Question was successfully updated.' }
-        format.json { render :show, status: :ok, location: @question }
-      else
-        format.html { render :edit }
-        format.json { render json: @question.errors, status: :unprocessable_entity }
-      end
+    if @question.update(question_params)
+      redirect_to overview_exam_path(@question.exam), notice: _('Question was successfully updated.')
+    else
+      render :edit
     end
   end
 
   # DELETE /questions/1
   # DELETE /questions/1.json
   def destroy
+    @exam = @question.exam
     @question.destroy
-    respond_to do |format|
-      format.html { redirect_to questions_url, notice: 'Question was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to overview_exam_path(@exam), notice: _('Question was successfully updated.')
+
   end
 
   private
@@ -69,6 +62,6 @@ class QuestionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_params
-      params.require(:question).permit(:sender_id, :exam_id, :question, :correct_answer, :answer_1, :answer_2, :answer_3, :description)
+      params.require(:question).permit(:exam_id, :question, :correct_answer, :answer_1, :answer_2, :answer_3, :description)
     end
 end

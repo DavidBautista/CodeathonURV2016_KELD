@@ -1,5 +1,5 @@
 <div class="page-header">
-  <%= link_to questions_path, :class => 'btn btn-default' do %>
+  <%= link_to overview_exam_path(@question.exam_id), :class => 'btn btn-default' do %>
     <span class="fa fa-list-alt"></span>
     <%= _('Back') %>
   <% end %>
@@ -7,14 +7,10 @@
     <span class="fa fa-pencil"></span>
   <%= _('Edit') %>
   <% end %>
-  <h1><%= _('Show question') %></h1>
+  <h1><%= _('Question for exam: ') %><%= @question.exam.name %></h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt><%= _('Sender:') %></dt>
-  <dd><%= @question.sender_id %></dd>
-  <dt><%= _('Exam:') %></dt>
-  <dd><%= @question.exam_id %></dd>
   <dt><%= _('Question:') %></dt>
   <dd><%= @question.question %></dd>
   <dt><%= _('Correct answer:') %></dt>

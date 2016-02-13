@@ -1,9 +1,9 @@
 <div class="page-header">
-  <%= link_to questions_path, :class => 'btn btn-default' do %>
+  <%= link_to overview_exam_path(@exam.id), :class => 'btn btn-default' do %>
     <span class="fa fa-list-alt"></span>
     <%= _('Back') %>
   <% end %>
-  <h1><%= _('New question') %></h1>
+  <h1><%= _('Sending question for') %> "<%= @exam.name %>"</h1>
 </div>
 
 <%= render 'form' %>

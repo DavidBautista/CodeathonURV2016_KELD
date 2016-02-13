@@ -14,6 +14,7 @@ pickle-email-*.html
 ## Environment normalization:
 /.bundle
 /vendor/bundle
+/config/database.yml
 
 # these should all be checked in to normalize the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset

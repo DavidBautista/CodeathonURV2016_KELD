@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to new_exam_path, :class => 'btn btn-primary' do %>
+    <span class="fa fa-plus"></span>
+    <%= _('New Exam') %>
+  <% end %>
+  <h1><%= _('Exams') %></h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover datatable">
+    <thead>
+      <tr>
+        <th><%= _('Name') %></th>
+        <th><%= _('Description') %></th>
+        <th><%= _('End date') %></th>
+        <th><%= _('Subject') %></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @exams) do |exam| %>
+        <td><%= exam.name %></td>
+        <td><%= exam.description %></td>
+        <td><%= exam.end_date %></td>
+        <td><%= exam.subject_id %></td>
+        <td>
+        <%= link_to fa_icon('search'), exam, class: 'btn btn-primary btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('View') %>
+        <%= link_to fa_icon('pencil'), edit_exam_path(exam), class: 'btn btn-warning btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('Edit') %>
+        <%= link_to fa_icon('remove'), exam, method: :delete, data: { confirm: _('Are you sure that you want delete this?') }, class: 'btn btn-danger btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('Delete') %>
+        </td>
+      <% end -%>
+    </tbody>
+  </table>
+</div>

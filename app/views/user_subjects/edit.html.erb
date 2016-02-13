@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%= link_to user_subjects_path, :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    <%= _('Back') %>
+  <% end %>
+  <%= link_to @user_subject, :class => 'btn btn-primary' do %>
+    <span class="fa fa-info-circle"></span>
+    <%= _('Show') %>
+  <% end %>
+  <h1><%= _('Editing user_subject') %></h1>
+</div>
+
+<%= render 'form' %>

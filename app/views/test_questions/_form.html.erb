@@ -1,0 +1,55 @@
+<%= form_for(@test_question, :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @test_question.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= n_('Error prohibited this user from being saved:','Errors prohibited this test_question from being saved:', @test_question.errors.count) %></h4>
+      <ul>
+      <% @test_question.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :test_id, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :test_id, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :question_id, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :question_id, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :answer, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :answer, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :correct, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.check_box :correct, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :order, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :order, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :fail_test_success, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.check_box :fail_test_success, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

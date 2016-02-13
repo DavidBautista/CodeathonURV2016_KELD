@@ -1,0 +1,22 @@
+<div class="page-header">
+  <%= link_to subjects_path, :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    <%= _('Back') %>
+  <% end %>
+  <%= link_to edit_subject_path(@subject), :class => 'btn btn-primary' do %>
+    <span class="fa fa-pencil"></span>
+  <%= _('Edit') %>
+  <% end %>
+  <h1><%= _('Show subject') %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><%= _('Name:') %></dt>
+  <dd><%= @subject.name %></dd>
+  <dt><%= _('Description:') %></dt>
+  <dd><%= @subject.description %></dd>
+  <dt><%= _('Center:') %></dt>
+  <dd><%= @subject.center_id %></dd>
+  <dt><%= _('Degree:') %></dt>
+  <dd><%= @subject.degree_id %></dd>
+</dl>

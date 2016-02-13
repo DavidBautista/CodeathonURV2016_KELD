@@ -1,0 +1,43 @@
+<div class="page-header">
+  <%= link_to new_question_path, :class => 'btn btn-primary' do %>
+    <span class="fa fa-plus"></span>
+    <%= _('New Question') %>
+  <% end %>
+  <h1><%= _('Questions') %></h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover datatable">
+    <thead>
+      <tr>
+        <th><%= _('Sender') %></th>
+        <th><%= _('Exam') %></th>
+        <th><%= _('Question') %></th>
+        <th><%= _('Correct answer') %></th>
+        <th><%= _('Answer 1') %></th>
+        <th><%= _('Answer 2') %></th>
+        <th><%= _('Answer 3') %></th>
+        <th><%= _('Description') %></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @questions) do |question| %>
+        <td><%= question.sender_id %></td>
+        <td><%= question.exam_id %></td>
+        <td><%= question.question %></td>
+        <td><%= question.correct_answer %></td>
+        <td><%= question.answer_1 %></td>
+        <td><%= question.answer_2 %></td>
+        <td><%= question.answer_3 %></td>
+        <td><%= question.description %></td>
+        <td>
+        <%= link_to fa_icon('search'), question, class: 'btn btn-primary btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('View') %>
+        <%= link_to fa_icon('pencil'), edit_question_path(question), class: 'btn btn-warning btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('Edit') %>
+        <%= link_to fa_icon('remove'), question, method: :delete, data: { confirm: _('Are you sure that you want delete this?') }, class: 'btn btn-danger btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('Delete') %>
+        </td>
+      <% end -%>
+    </tbody>
+  </table>
+</div>

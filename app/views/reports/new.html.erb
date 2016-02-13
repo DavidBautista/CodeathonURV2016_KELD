@@ -1,0 +1,9 @@
+<div class="page-header">
+  <%= link_to reports_path, :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    <%= _('Back') %>
+  <% end %>
+  <h1><%= _('New report') %></h1>
+</div>
+
+<%= render 'form' %>

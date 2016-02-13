@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%%= link_to new_<%= singular_table_name %>_path, :class => 'btn btn-primary' do %>
+    <span class="fa fa-plus"></span>
+    <%%= _('New <%= human_name %>') %>
+  <%% end %>
+  <h1><%%= _('<%= plural_table_name.capitalize %>') %></h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover datatable">
+    <thead>
+      <tr>
+    <% attributes.each do |attribute| -%>
+    <th><%%= _('<%= attribute.human_name %>') %></th>
+    <% end -%>
+    <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%%= content_tag_for(:tr, @<%= plural_table_name %>) do |<%= singular_table_name %>| %>
+    <% attributes.each do |attribute| -%>
+    <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+    <% end -%>
+    <td>
+        <%%= link_to fa_icon('search'), <%= singular_table_name %>, class: 'btn btn-primary btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('View') %>
+        <%%= link_to fa_icon('pencil'), edit_<%= singular_table_name %>_path(<%= singular_table_name %>), class: 'btn btn-warning btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('Edit') %>
+        <%%= link_to fa_icon('remove'), <%= singular_table_name %>, method: :delete, data: { confirm: _('Are you sure that you want delete this?') }, class: 'btn btn-danger btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('Delete') %>
+        </td>
+      <%% end -%>
+    </tbody>
+  </table>
+</div>

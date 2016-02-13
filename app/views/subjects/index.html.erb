@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to new_subject_path, :class => 'btn btn-primary' do %>
+    <span class="fa fa-plus"></span>
+    <%= _('New Subject') %>
+  <% end %>
+  <h1><%= _('Subjects') %></h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover datatable">
+    <thead>
+      <tr>
+        <th><%= _('Name') %></th>
+        <th><%= _('Description') %></th>
+        <th><%= _('Center') %></th>
+        <th><%= _('Degree') %></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @subjects) do |subject| %>
+        <td><%= subject.name %></td>
+        <td><%= subject.description %></td>
+        <td><%= subject.center_id %></td>
+        <td><%= subject.degree_id %></td>
+        <td>
+        <%= link_to fa_icon('search'), subject, class: 'btn btn-primary btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('View') %>
+        <%= link_to fa_icon('pencil'), edit_subject_path(subject), class: 'btn btn-warning btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('Edit') %>
+        <%= link_to fa_icon('remove'), subject, method: :delete, data: { confirm: _('Are you sure that you want delete this?') }, class: 'btn btn-danger btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('Delete') %>
+        </td>
+      <% end -%>
+    </tbody>
+  </table>
+</div>

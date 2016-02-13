@@ -1,0 +1,22 @@
+<div class="page-header">
+  <%= link_to reports_path, :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    <%= _('Back') %>
+  <% end %>
+  <%= link_to edit_report_path(@report), :class => 'btn btn-primary' do %>
+    <span class="fa fa-pencil"></span>
+  <%= _('Edit') %>
+  <% end %>
+  <h1><%= _('Show report') %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><%= _('Question:') %></dt>
+  <dd><%= @report.question_id %></dd>
+  <dt><%= _('Sender:') %></dt>
+  <dd><%= @report.sender_id %></dd>
+  <dt><%= _('Option:') %></dt>
+  <dd><%= @report.option %></dd>
+  <dt><%= _('Description:') %></dt>
+  <dd><%= @report.description %></dd>
+</dl>

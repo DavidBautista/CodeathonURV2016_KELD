@@ -1,0 +1,22 @@
+<div class="page-header">
+  <%= link_to exams_path, :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    <%= _('Back') %>
+  <% end %>
+  <%= link_to edit_exam_path(@exam), :class => 'btn btn-primary' do %>
+    <span class="fa fa-pencil"></span>
+  <%= _('Edit') %>
+  <% end %>
+  <h1><%= _('Show exam') %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><%= _('Name:') %></dt>
+  <dd><%= @exam.name %></dd>
+  <dt><%= _('Description:') %></dt>
+  <dd><%= @exam.description %></dd>
+  <dt><%= _('End date:') %></dt>
+  <dd><%= @exam.end_date %></dd>
+  <dt><%= _('Subject:') %></dt>
+  <dd><%= @exam.subject_id %></dd>
+</dl>

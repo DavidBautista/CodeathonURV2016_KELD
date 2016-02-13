@@ -1,0 +1,43 @@
+<%= form_for(@report, :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @report.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= n_('Error prohibited this user from being saved:','Errors prohibited this report from being saved:', @report.errors.count) %></h4>
+      <ul>
+      <% @report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :question_id, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :question_id, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sender_id, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :sender_id, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :option, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :option, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :description, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

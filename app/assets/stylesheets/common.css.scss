@@ -17,3 +17,30 @@
   margin-right: auto;
   height: 510px;
 }
+
+.panel.panel-danger{
+  .panel-login{
+    background-color: #c0392b;
+    color: white;
+  }
+  border-color: #c0392b;
+
+}
+
+.div-label-color {
+  a {
+    color: #2f0a06;
+    text-decoration: underline;
+    float: right;
+  }
+  label {
+    color: #2f0a06;
+  }
+}
+
+.button-redurv{
+  background-color: #f39c12;
+}
+.button-redurv:hover{
+  background-color: #e67e22;
+}

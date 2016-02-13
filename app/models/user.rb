@@ -14,5 +14,6 @@ class User < ActiveRecord::Base
   has_many :badges, through: :user_badges
   has_many :test_questions, through: :tests
   has_many :subjects, through: :user_subjects
+  has_many :exams, through: :subjects
 
 end

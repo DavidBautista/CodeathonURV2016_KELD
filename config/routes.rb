@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   resources :test_questions
   resources :tests
   resources :questions
-  resources :exams
+  resources :exams do
+    member do
+      get :overview
+    end
+  end
   resources :user_subjects
   resources :degrees
   resources :centers

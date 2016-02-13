@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
 
+  helper_method :active_exams
   helper_method :locale
   before_filter :set_gettext_locale
 
@@ -11,6 +12,9 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
+  def active_exams
+    current_user.exams.where("end_date >= \"#{DateTime.now.to_formatted_s(:db)}\"")
+  end
 
   protected
 

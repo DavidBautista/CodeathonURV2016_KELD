@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
+//= require jquery.colorbox
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require moment
+//= require daterangepicker
 //= require_tree .

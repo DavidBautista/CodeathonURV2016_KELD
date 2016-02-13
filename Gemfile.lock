@@ -40,6 +40,14 @@ GEM
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-daterangepicker-rails (0.1.2)
+      railties (~> 4.0)
+    bootstrap-generators (3.2.0)
+      railties (>= 3.1.0)
+    bootstrap-sass (3.1.1.1)
+      sass (~> 3.2)
+    bootstrap-sass-extras (0.0.6)
+      rails (>= 3.1.0)
     builder (3.2.2)
     byebug (8.2.2)
     coffee-rails (4.1.1)
@@ -51,21 +59,34 @@ GEM
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.0)
     debug_inspector (0.0.2)
-    devise (3.5.6)
+    devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-bootstrap-views (0.0.7)
+    devise-i18n (0.12.1)
     erubis (2.7.0)
     execjs (2.6.0)
+    font-awesome-rails (4.5.0.1)
+      railties (>= 3.2, < 5.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    html5shiv-js-rails (3.7.3)
+      railties (~> 4.0, < 5.0)
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
+    jquery-colorbox-rails (0.3.2)
+      railties (>= 3.1, <= 5.0)
+    jquery-datatables-rails (3.1.1)
+      actionpack (>= 3.1)
+      jquery-rails
+      railties (>= 3.1)
+      sass-rails
     jquery-rails (4.1.0)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -78,6 +99,8 @@ GEM
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
+    momentjs-rails (2.11.0)
+      railties (>= 3.1)
     multi_json (1.11.2)
     mysql2 (0.4.2)
     nokogiri (1.6.7.2)
@@ -113,6 +136,8 @@ GEM
     rake (10.5.0)
     rdoc (4.2.2)
       json (~> 1.4)
+    respond-js-rails (1.4.2.1)
+      railties (~> 4.0, < 5.0)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
     sass (3.4.21)
@@ -125,7 +150,6 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    spring (1.6.3)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -155,16 +179,28 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.10)
+  bootstrap-daterangepicker-rails
+  bootstrap-generators (~> 3.2.0)
+  bootstrap-sass (~> 3.1.1.1)
+  bootstrap-sass-extras
   byebug
   coffee-rails (~> 4.1.0)
-  devise
+  devise (= 3.4.1)
+  devise-bootstrap-views
+  devise-i18n
+  font-awesome-rails
+  html5shiv-js-rails
   jbuilder (~> 2.0)
+  jquery-colorbox-rails
+  jquery-datatables-rails (~> 3.1.1)
   jquery-rails
+  momentjs-rails
   mysql2 (>= 0.3.13, < 0.5)
   rails (= 4.2.5.1)
+  respond-js-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  spring
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)

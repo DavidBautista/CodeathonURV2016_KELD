@@ -10,11 +10,26 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'bcrypt', '3.1.10'
 
-gem 'devise'
+gem 'bootstrap-sass', '~> 3.1.1.1'
+gem 'bootstrap-sass-extras'
+gem 'bootstrap-generators', '~> 3.2.0'
+gem 'font-awesome-rails'
+gem 'jquery-colorbox-rails'
+gem 'jquery-datatables-rails', '~> 3.1.1'
 
+
+gem 'respond-js-rails'
+gem 'html5shiv-js-rails'
+
+gem 'momentjs-rails'
+gem 'bootstrap-daterangepicker-rails'
+
+gem 'devise', '3.4.1'
+gem 'devise-i18n'
+gem 'devise-bootstrap-views'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server
 # gem 'unicorn'
 # Use Capistrano for deployment
@@ -26,6 +41,6 @@ end
 
 group :development do
   gem 'web-console', '~> 2.0'
-  gem 'spring'
+#  gem 'spring'
 end
 

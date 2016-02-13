@@ -10,6 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap-generators
+ *= require font-awesome
+ *= require jquery.colorbox-example1
+ *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+ *= require daterangepicker-bs3
  *= require_tree .
  *= require_self
  */

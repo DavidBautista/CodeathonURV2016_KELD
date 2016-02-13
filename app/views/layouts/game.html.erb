@@ -12,7 +12,38 @@
 
 <%= render :partial => 'shared/navbar' %>
 
-<%= yield %>
 
+<!-- Page Content -->
+<div id="page-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <% if notice.present? or alert.present? -%>
+          <div class="row">
+            <div class="col-xs-12">
+              <% if notice.present? -%>
+                <div class="alert alert-success alert-dismissible mt30" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <p class="notice"><%= notice %></p>
+                </div>
+              <% end -%>
+              <% if alert.present? %>
+                <div class="alert alert-danger alert-dismissible mt30" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <p class="alert"><%= alert %></p>
+                </div>
+              <% end -%>
+            </div>
+          </div>
+        <% end -%>
+        <%= yield %>
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
 </body>
 </html>

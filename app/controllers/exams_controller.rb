@@ -1,5 +1,10 @@
 class ExamsController < ApplicationController
-  before_action :set_exam, only: [:show, :edit, :update, :destroy]
+  before_action :set_exam, only: [:show, :edit, :update, :destroy, :overview]
+
+
+  def overview
+    
+  end
 
   # GET /exams
   # GET /exams.json

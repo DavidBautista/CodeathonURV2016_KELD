@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to test_questions_path, :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    <%= _('Back') %>
+  <% end %>
+  <%= link_to edit_test_question_path(@test_question), :class => 'btn btn-primary' do %>
+    <span class="fa fa-pencil"></span>
+  <%= _('Edit') %>
+  <% end %>
+  <h1><%= _('Show test_question') %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><%= _('Test:') %></dt>
+  <dd><%= @test_question.test_id %></dd>
+  <dt><%= _('Question:') %></dt>
+  <dd><%= @test_question.question_id %></dd>
+  <dt><%= _('Answer:') %></dt>
+  <dd><%= @test_question.answer %></dd>
+  <dt><%= _('Correct:') %></dt>
+  <dd><%= @test_question.correct %></dd>
+  <dt><%= _('Order:') %></dt>
+  <dd><%= @test_question.order %></dd>
+  <dt><%= _('Fail test success:') %></dt>
+  <dd><%= @test_question.fail_test_success %></dd>
+</dl>

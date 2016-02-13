@@ -1,0 +1,20 @@
+<div class="page-header">
+  <%= link_to badges_path, :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    <%= _('Back') %>
+  <% end %>
+  <%= link_to edit_badge_path(@badge), :class => 'btn btn-primary' do %>
+    <span class="fa fa-pencil"></span>
+  <%= _('Edit') %>
+  <% end %>
+  <h1><%= _('Show badge') %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><%= _('Name:') %></dt>
+  <dd><%= @badge.name %></dd>
+  <dt><%= _('Icon path:') %></dt>
+  <dd><%= @badge.icon_path %></dd>
+  <dt><%= _('Description:') %></dt>
+  <dd><%= @badge.description %></dd>
+</dl>

@@ -1,0 +1,37 @@
+<%= form_for(@center, :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @center.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= n_('Error prohibited this user from being saved:','Errors prohibited this center from being saved:', @center.errors.count) %></h4>
+      <ul>
+      <% @center.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :name, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :country, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :country, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :address, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :address, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%= link_to degrees_path, :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    <%= _('Back') %>
+  <% end %>
+  <%= link_to @degree, :class => 'btn btn-primary' do %>
+    <span class="fa fa-info-circle"></span>
+    <%= _('Show') %>
+  <% end %>
+  <h1><%= _('Editing degree') %></h1>
+</div>
+
+<%= render 'form' %>

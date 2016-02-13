@@ -1,0 +1,30 @@
+<div class="page-header">
+  <%= link_to questions_path, :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    <%= _('Back') %>
+  <% end %>
+  <%= link_to edit_question_path(@question), :class => 'btn btn-primary' do %>
+    <span class="fa fa-pencil"></span>
+  <%= _('Edit') %>
+  <% end %>
+  <h1><%= _('Show question') %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><%= _('Sender:') %></dt>
+  <dd><%= @question.sender_id %></dd>
+  <dt><%= _('Exam:') %></dt>
+  <dd><%= @question.exam_id %></dd>
+  <dt><%= _('Question:') %></dt>
+  <dd><%= @question.question %></dd>
+  <dt><%= _('Correct answer:') %></dt>
+  <dd><%= @question.correct_answer %></dd>
+  <dt><%= _('Answer 1:') %></dt>
+  <dd><%= @question.answer_1 %></dd>
+  <dt><%= _('Answer 2:') %></dt>
+  <dd><%= @question.answer_2 %></dd>
+  <dt><%= _('Answer 3:') %></dt>
+  <dd><%= @question.answer_3 %></dd>
+  <dt><%= _('Description:') %></dt>
+  <dd><%= @question.description %></dd>
+</dl>

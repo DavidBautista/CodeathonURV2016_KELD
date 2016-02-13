@@ -1,0 +1,39 @@
+<div class="page-header">
+  <%= link_to new_test_question_path, :class => 'btn btn-primary' do %>
+    <span class="fa fa-plus"></span>
+    <%= _('New Test question') %>
+  <% end %>
+  <h1><%= _('Test_questions') %></h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover datatable">
+    <thead>
+      <tr>
+        <th><%= _('Test') %></th>
+        <th><%= _('Question') %></th>
+        <th><%= _('Answer') %></th>
+        <th><%= _('Correct') %></th>
+        <th><%= _('Order') %></th>
+        <th><%= _('Fail test success') %></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @test_questions) do |test_question| %>
+        <td><%= test_question.test_id %></td>
+        <td><%= test_question.question_id %></td>
+        <td><%= test_question.answer %></td>
+        <td><%= test_question.correct %></td>
+        <td><%= test_question.order %></td>
+        <td><%= test_question.fail_test_success %></td>
+        <td>
+        <%= link_to fa_icon('search'), test_question, class: 'btn btn-primary btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('View') %>
+        <%= link_to fa_icon('pencil'), edit_test_question_path(test_question), class: 'btn btn-warning btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('Edit') %>
+        <%= link_to fa_icon('remove'), test_question, method: :delete, data: { confirm: _('Are you sure that you want delete this?') }, class: 'btn btn-danger btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('Delete') %>
+        </td>
+      <% end -%>
+    </tbody>
+  </table>
+</div>

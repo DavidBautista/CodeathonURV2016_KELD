@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%%= link_to <%= index_helper %>_path, :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    <%%= _('Back') %>
+  <%% end %>
+  <%%= link_to @<%= singular_table_name %>, :class => 'btn btn-primary' do %>
+    <span class="fa fa-info-circle"></span>
+    <%%= _('Show') %>
+  <%% end %>
+  <h1><%%= _('Editing <%= singular_table_name %>') %></h1>
+</div>
+
+<%%= render 'form' %>

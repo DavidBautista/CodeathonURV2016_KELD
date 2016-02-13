@@ -1,0 +1,20 @@
+<div class="page-header">
+  <%= link_to centers_path, :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    <%= _('Back') %>
+  <% end %>
+  <%= link_to edit_center_path(@center), :class => 'btn btn-primary' do %>
+    <span class="fa fa-pencil"></span>
+  <%= _('Edit') %>
+  <% end %>
+  <h1><%= _('Show center') %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><%= _('Name:') %></dt>
+  <dd><%= @center.name %></dd>
+  <dt><%= _('Country:') %></dt>
+  <dd><%= @center.country %></dd>
+  <dt><%= _('Address:') %></dt>
+  <dd><%= @center.address %></dd>
+</dl>

@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
   layout Proc.new { |controller| controller.devise_controller? ? 'application' : 'game' }
+  before_filter :configure_permitted_parameters, if: :devise_controller?
+
   protect_from_forgery with: :exception
   before_action :authenticate_user!
-
   helper_method :active_exams
   helper_method :locale
   before_filter :set_gettext_locale
@@ -32,6 +33,9 @@ class ApplicationController < ActionController::Base
     params[:locale] || session[:locale] || I18n.default_locale
   end
 
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:first_name, :last_name, :password_confirmation, :password, :email) }
+  end
 
   def set_gettext_locale
     requested_locale = params[:locale] || session[:locale] || cookies[:locale] ||  request.env['HTTP_ACCEPT_LANGUAGE'] || I18n.default_locale

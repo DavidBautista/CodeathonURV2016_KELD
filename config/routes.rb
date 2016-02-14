@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :exams do
     member do
       get :overview
+      get :show_ranking
     end
   end
   resources :user_subjects

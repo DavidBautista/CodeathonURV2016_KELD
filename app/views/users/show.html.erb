@@ -1,9 +1,14 @@
 <div class="page-header">
   <% if current_user.id == @user.id %>
-    <%= link_to edit_user_path(@user), :class => 'btn btn-primary' do %>
-      <span class="fa fa-pencil"></span>
-      <%= _('Edit') %>
-    <% end -%>
+      <%= link_to edit_user_path(@user), :class => 'btn btn-default' do %>
+          <span class="fa fa-pencil"></span>
+          <%= _('Edit') %>
+      <% end -%>
+  <% else %>
+      <%= link_to :back, :class => 'btn btn-default' do %>
+          <span class="fa fa-list-alt"></span>
+          <%= _('Back') %>
+      <% end %>
   <% end -%>
 
   <h1><%= current_user.name %></h1>
@@ -15,7 +20,7 @@
     <%= image_tag "level-#{current_user.level}.png", class: 'img-responsive' %>
   </div>
   <div class="col-xs-9">
-    <h3><%= _('Level') %> <%= current_user.level %> - <%= level_name(current_user.level)%></h3>
+    <h3><%= _('Level') %> <%= current_user.level %> - <%= level_name(current_user.level) %></h3>
     <div class="progress" style="width: 250px; max-width: 100%;">
       <span style="position: absolute; left: 25px;"><%= "exp: #{current_user.experience.to_s}/#{exp_for_next_level(current_user.level)}" %></span>
 

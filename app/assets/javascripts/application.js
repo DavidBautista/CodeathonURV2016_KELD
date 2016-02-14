@@ -26,3 +26,9 @@ window.setTimeout(function() {
         $(this).remove();
     });
 }, 3500);
+
+
+$(function () {
+    $('.testranking').colorbox();
+    $('.creatorranking').colorbox();
+});

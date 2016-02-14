@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-xs-12">
+    <%= link_to respond_question_path(test_id: @test.id, order: @test_question.order, response: answer[:number]),
+                method: :post, class: '' do %>
+      <%= answer[:text] %>
+    <% end %>
+  </div>
+</div>

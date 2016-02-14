@@ -1,6 +1,26 @@
 class TestQuestionsController < ApplicationController
   before_action :set_test_question, only: [:show, :edit, :update, :destroy]
 
+  def present_test_question
+    @test = Test.find(params[:test_id])
+    @test_question = TestQuestion.where(test_id: params[:test_id], order: params[:order]).first
+    @question = @test_question.question
+    @question_dict = [{text: @question.correct_answer, number: 1}, {text: @question.answer_1, number: 2},
+                      {text: @question.answer_2, number: 3}, {text: @question.answer_3, number: 4}]#.shuffle
+  end
+
+  def respond_question
+    @user_response = params[:response]
+    @test = Test.find(params[:test_id])
+    @test_question = TestQuestion.where(test_id: params[:test_id], order: params[:order]).first
+    @test_question.correct = @user_response == '1'
+    @test_question.answer = @user_response
+    @test_question.save
+    @question = @test_question.question
+    @question_dict = [{text: @question.correct_answer, number: 1}, {text: @question.answer_1, number: 2},
+                      {text: @question.answer_2, number: 3}, {text: @question.answer_3, number: 4}]
+  end
+
   # GET /test_questions
   # GET /test_questions.json
   def index

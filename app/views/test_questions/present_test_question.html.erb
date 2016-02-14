@@ -1,0 +1,49 @@
+<div class="page-header">
+  <h1><%= "#{@test.exam.name} (#{@test.exam.subject.name}) #{@test.created_at.to_date.strftime("%d-%m-%Y")}" %></h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-1"><%= "#{@test_question.order-1}/#{@test.test_questions.count}" %></div>
+  <div class="col-xs-11">
+    <% @test.test_questions.each do |test_question| -%>
+      <span class="badge <%= test_question_badge_color(test_question) %>"><%= test_question.order %></span>
+    <% end -%>
+  </div>
+</div>
+
+
+<div class="panel panel-default mt20">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><%= @question.question %></div>
+  <!-- List group -->
+  <ul class="list-group">
+    <% @question_dict.each do |answer| -%>
+      <li class="list-group-item"><%= render :partial => "test_questions/test_answer", :locals => {:answer => answer} %></li>
+    <% end -%>
+
+  </ul>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-12 col-sm-9">
+    <div class="explanation well">
+      <h3><%= _('Theoretical explanation:') %></h3>
+      <p><%= @question.description %></p>
+    </div>
+    <br>
+    <button class="btn btn-warning btn-xs"><%= fa_icon('warning') %> <%= _('Report') %></button>
+  </div>
+
+  <% if @test.test_questions.where(answer: 0).count <= 1 %>
+    <%= link_to finish_test_path(test_id: @test.id), :class => 'btn btn-default pull-right', disabled: true do %>
+      <%= _('Finish test') %>
+      <span class="fa fa-check"></span>
+    <% end -%>
+  <% else -%>
+    <%= link_to present_test_question_path(test_id: @test.id, order: @test_question.order + 1), disabled:true, :class => 'btn btn-default pull-right' do %>
+      <%= _('Next question') %>
+      <span class="fa fa-arrow-circle-right"></span>
+    <% end -%>
+  <% end -%>
+</div>

@@ -30,6 +30,10 @@
   background-color: green;
 }
 
+.badge.gray {
+  background-color: gray;
+}
+
 .panel.panel-danger{
   .panel-login{
     background-color: #c0392b;
@@ -60,4 +64,19 @@
 .logo-navbar{
   margin-top: -20px;
   height: 80px;
+}
+
+.explanation{
+
+  display: none;
+}
+
+.answer.green{
+  background-color: green;
+  color: white;
+}
+
+.answer.red{
+  background-color: darkred;
+  color: white;
 }

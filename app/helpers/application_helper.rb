@@ -20,4 +20,15 @@ module ApplicationHelper
         500
     end
   end
+
+  def test_question_badge_color(test_question)
+    if test_question.correct.nil?
+      'gray'
+    elsif test_question.correct
+      'green'
+    else
+      'red'
+    end
+
+  end
 end

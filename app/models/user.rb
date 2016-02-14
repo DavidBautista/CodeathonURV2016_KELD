@@ -16,6 +16,17 @@ class User < ActiveRecord::Base
   has_many :subjects, through: :user_subjects
   has_many :exams, through: :subjects
 
+  before_create :set_default_values
+
+
+
+  def set_default_values
+    if self.new_record?
+      self.level = 1
+      self.experience = 0
+    end
+  end
+
   def name
     "#{first_name} #{last_name}"
   end

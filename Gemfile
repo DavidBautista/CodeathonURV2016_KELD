@@ -18,7 +18,8 @@ gem 'bootstrap-generators', '~> 3.2.0'
 gem 'font-awesome-rails'
 gem 'jquery-colorbox-rails'
 gem 'jquery-datatables-rails', '~> 3.1.1'
-
+gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate-bootstrap'
 
 gem 'respond-js-rails'
 gem 'html5shiv-js-rails'

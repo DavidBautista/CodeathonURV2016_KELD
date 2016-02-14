@@ -1,0 +1,40 @@
+<div class="page-header">
+  <h1><%= _('Global Ranking') %> <small><%= _('Based on experience') %></small></h1>
+</div>
+
+<div class="table-responsive">
+  <%= will_paginate @users, renderer: BootstrapPagination::Rails %>
+  <table class="table table-striped table-bordered table-hover datatable"  style="text-align: center;">
+    <thead>
+    <tr>
+      <th style="width: 45px;"></th>
+      <th><%= _('Level') %></th>
+      <th><%= _('Experience') %></th>
+      <th><%= _('Name') %></th>
+      <th><%= _('Tests') %></th>
+      <th><%= _('Questions') %></th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <%= content_tag_for(:tr, @users) do |user| %>
+      <td>
+        <%= image_tag "level-#{user.level}.png", style: 'width: 40px;' %>
+      </td>
+      <td><%= user.level %></td>
+      <td><%= user.experience %></td>
+      <td><%= user.name %></td>
+      <td><%= user.tests.count %></td>
+      <td><%= user.questions.count %></td>
+      <td>
+        <%= link_to fa_icon('search'), user, class: 'btn btn-primary btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', :title => _('View profile') %>
+      </td>
+    <% end -%>
+    </tbody>
+  </table>
+  <%= will_paginate @users, renderer: BootstrapPagination::Rails %>
+</div>
+
+
+

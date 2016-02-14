@@ -1,5 +1,5 @@
 class ExamsController < ApplicationController
-  before_action :set_exam, only: [:show, :edit, :update, :destroy, :overview]
+  before_action :set_exam, only: [:show, :edit, :update, :destroy, :overview, :show_ranking, :show_ranking_creator]
 
 
   def overview
@@ -27,7 +27,12 @@ class ExamsController < ApplicationController
   end
 
   def show_ranking
-    @users = User.all
+    @users = @exam.subject.users
+    render "ranking", layout: false
+  end
+
+  def show_ranking_creator
+    @users = @exam.subject.users
     render "ranking", layout: false
   end
 

@@ -4,14 +4,21 @@
     <%= _('Go to exam') %>
     <span class="fa fa-arrow-circle-right"></span>
   <% end -%>
-  <h1><%= "Results: #{@test.exam.name} (#{@test.exam.subject.name}) #{@test.created_at.to_date.strftime("%d-%m-%Y")}" %></h1>
+  <h1><%= "Results: #{@test.exam.name} (#{@test.exam.subject.name})" %></h1>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="alert alert-info" role="alert">
+      <h3><%= "#{_('You obtained')} #{@test.obtained_experience} #{_('experience points')}" %></h3>
+    </div>
+  </div>
 </div>
 
 <div class="row">
   <div class="col-xs-12">
     <span class="badge green" style="font-size: 40px;"> <%= @correct %></span> <%=_('Correct')%> / <span class="badge red" style="font-size: 40px;"> <%= @incorrect %></span> <%=_('Incorrect')%>
   </div>
-  <div class="col-xs-12">
+  <div class="col-xs-12 mt20">
     <div class="progress" style="max-width: 100%;">
 
       <div class="progress-bar progress-bar-success" style="width: <%= @correct.to_f*100/(@correct+@incorrect)%>%">

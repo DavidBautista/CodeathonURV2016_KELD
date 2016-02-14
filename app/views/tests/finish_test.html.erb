@@ -1,0 +1,56 @@
+<div class="page-header">
+
+  <%= link_to overview_exam_path(@test.exam_id), :class => 'btn btn-default pull-right' do %>
+    <%= _('Go to exam') %>
+    <span class="fa fa-arrow-circle-right"></span>
+  <% end -%>
+  <h1><%= "Results: #{@test.exam.name} (#{@test.exam.subject.name}) #{@test.created_at.to_date.strftime("%d-%m-%Y")}" %></h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <span class="badge green" style="font-size: 40px;"> <%= @correct %></span> <%=_('Correct')%> / <span class="badge red" style="font-size: 40px;"> <%= @incorrect %></span> <%=_('Incorrect')%>
+  </div>
+  <div class="col-xs-12">
+    <div class="progress" style="max-width: 100%;">
+
+      <div class="progress-bar progress-bar-success" style="width: <%= @correct.to_f*100/(@correct+@incorrect)%>%">
+        <span class="sr-only"></span>
+      </div>
+      <div class="progress-bar progress-bar-danger" style="width: <%= @incorrect.to_f*100/(@correct+@incorrect)%>%">
+        <span class="sr-only"></span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-xs-12">
+    <% @test.test_questions.each do |test_question| -%>
+      <span class="badge <%= test_question_badge_color(test_question) %>"><%= test_question.order %></span>
+    <% end -%>
+  </div>
+</div>
+
+<% @test.test_questions.each do |test_question| %>
+<div class="panel panel-default mt20">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><span class="badge <%= test_question_badge_color(test_question) %>"><%= test_question.order %></span> <%= test_question.question.question %></div>
+  <!-- List group -->
+  <ul class="list-group">
+    <% question = test_question.question%>
+    <% @test_question = test_question%>
+    <% question_dict = [{text: question.correct_answer, number: 1}, {text: question.answer_1, number: 2},
+                         {text: question.answer_2, number: 3}, {text: question.answer_3, number: 4}]
+    %>
+    <% question_dict.each do |answer| -%>
+      <li class="list-group-item"><%= render :partial => "test_questions/test_answer_done", :locals => {:answer => answer} %></li>
+    <% end -%>
+
+  </ul>
+</div>
+<% end -%>
+
+<%= link_to overview_exam_path(@test.exam_id), :class => 'btn btn-default pull-right' do %>
+  <%= _('Go to exam') %>
+  <span class="fa fa-arrow-circle-right"></span>
+<% end -%>

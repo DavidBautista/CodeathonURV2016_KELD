@@ -15,7 +15,13 @@ class TestsController < ApplicationController
 
   def finish_test
     @test = Test.find(params[:test_id])
-
+    @correct = @test.correct_answers_count
+    @incorrect = @test.incorrect_answers_count
+    @test.obtained_experience = (@correct*10.0/(@correct+@incorrect))
+    @test.save
+    current_user.experience += @test.obtained_experience
+    puts @test.obtained_experience
+    current_user.save
   end
 
   # GET /tests

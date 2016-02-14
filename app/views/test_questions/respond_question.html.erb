@@ -35,7 +35,7 @@
     <button class="btn btn-warning btn-xs"><%= fa_icon('warning') %> <%= _('Report') %></button>
   </div>
   <% if @test.test_questions.where(answer: 0).count == 0 %>
-    <%= link_to finish_test_path(test_id: @test.id), :class => 'btn btn-default pull-right' do %>
+    <%= link_to finish_test_path(test_id: @test.id), method: :post, :class => 'btn btn-default pull-right' do %>
       <%= _('Finish test') %>
       <span class="fa fa-check"></span>
     <% end -%>

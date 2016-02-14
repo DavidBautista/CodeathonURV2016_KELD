@@ -16,3 +16,506 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
+
+msgid "Active Exams"
+msgstr "Exàmens actius"
+
+msgid "Address"
+msgstr "Direcció"
+
+msgid "Address:"
+msgstr "Dirección:"
+
+msgid "Answer"
+msgstr "Resposta"
+
+msgid "Answer 1"
+msgstr "Resposta 1"
+
+msgid "Answer 1:"
+msgstr "Resposta 1:"
+
+msgid "Answer 2"
+msgstr "Resposta 2"
+
+msgid "Answer 2:"
+msgstr "Resposta 2:"
+
+msgid "Answer 3"
+msgstr "Resposta 3:"
+
+msgid "Answer 3:"
+msgstr "Resposta 3:"
+
+msgid "Answer:"
+msgstr "Resposta:"
+
+msgid "Are you sure that you want delete this?"
+msgstr "Estàs segur de que vols esborrar això?"
+
+msgid "Back"
+msgstr "Enrere"
+
+msgid "Badge"
+msgstr ""
+
+msgid "Badge:"
+msgstr ""
+
+msgid "Badges"
+msgstr ""
+
+msgid "Based on experience"
+msgstr "Basat en la experiència"
+
+msgid "Center"
+msgstr "Centre"
+
+msgid "Center:"
+msgstr "Centre:"
+
+msgid "Centers"
+msgstr "Centres"
+
+msgid "Chick"
+msgstr "Pollet"
+
+msgid "Choose an exam to practise!"
+msgstr "Escull un exàmen per practicar!"
+
+msgid "Correct"
+msgstr "Correcte"
+
+msgid "Correct answer"
+msgstr "Resposta correcta"
+
+msgid "Correct answer:"
+msgstr "Resposta correcta: "
+
+msgid "Correct:"
+msgstr "Correcte: "
+
+msgid "Country"
+msgstr "País"
+
+msgid "Country:"
+msgstr "País"
+
+msgid "Creators Ranking"
+msgstr "Rànking de creadors"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Degree"
+msgstr "Carrera"
+
+msgid "Degree:"
+msgstr "Carrera:"
+
+msgid "Degrees"
+msgstr "Carreres"
+
+msgid "Delete"
+msgstr "Esborrar"
+
+msgid "Description"
+msgstr "Descripció"
+
+msgid "Description:"
+msgstr "Descripció:"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Editing badge"
+msgstr ""
+
+msgid "Editing center"
+msgstr ""
+
+msgid "Editing degree"
+msgstr ""
+
+msgid "Editing exam"
+msgstr ""
+
+msgid "Editing profile"
+msgstr "Editant perfil"
+
+msgid "Editing question"
+msgstr "Editant pregunta"
+
+msgid "Editing report"
+msgstr ""
+
+msgid "Editing subject"
+msgstr ""
+
+msgid "Editing test"
+msgstr ""
+
+msgid "Editing test_question"
+msgstr ""
+
+msgid "Editing user_badge"
+msgstr ""
+
+msgid "Editing user_subject"
+msgstr ""
+
+msgid "Egg"
+msgstr "Ou"
+
+msgid "Email"
+msgstr ""
+
+msgid "End date"
+msgstr "Data de termini"
+
+msgid "End date:"
+msgstr "Data de termini:"
+
+msgid "Error prohibited this user from being saved:"
+msgid_plural "Errors prohibited this badge from being saved:"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Exam"
+msgstr "Exàmen"
+
+msgid "Exam:"
+msgstr "Exàmen:"
+
+msgid "Exams"
+msgstr "Exàmens"
+
+msgid "Experience"
+msgstr "Experiència"
+
+msgid "Fail test success"
+msgstr ""
+
+msgid "Fail test success:"
+msgstr ""
+
+msgid "Finish test"
+msgstr "Acabar test"
+
+msgid "First name"
+msgstr "Nom"
+
+msgid "Global Ranking"
+msgstr "Rànking global"
+
+msgid "Go to exam"
+msgstr "Tornar a exàmen"
+
+msgid "Graduated Chick"
+msgstr "Pollet graduat"
+
+msgid "Icon path"
+msgstr ""
+
+msgid "Icon path:"
+msgstr ""
+
+msgid "Incorrect"
+msgstr "Incorrecte"
+
+msgid "Last name"
+msgstr "Cognom"
+
+msgid "Level"
+msgstr "Nivell"
+
+msgid "Logout"
+msgstr "Sortir"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Name:"
+msgstr "Nom:"
+
+msgid "New Badge"
+msgstr ""
+
+msgid "New Center"
+msgstr ""
+
+msgid "New Degree"
+msgstr ""
+
+msgid "New Exam"
+msgstr ""
+
+msgid "New Question"
+msgstr "Nova pregunta"
+
+msgid "New Report"
+msgstr ""
+
+msgid "New Subject"
+msgstr ""
+
+msgid "New Test"
+msgstr "Nou test"
+
+msgid "New Test question"
+msgstr ""
+
+msgid "New User"
+msgstr ""
+
+msgid "New User badge"
+msgstr ""
+
+msgid "New User subject"
+msgstr ""
+
+msgid "New badge"
+msgstr ""
+
+msgid "New center"
+msgstr ""
+
+msgid "New degree"
+msgstr ""
+
+msgid "New exam"
+msgstr ""
+
+msgid "New report"
+msgstr ""
+
+msgid "New subject"
+msgstr ""
+
+msgid "New test"
+msgstr "Nou test"
+
+msgid "New test of errors"
+msgstr "Nou test d'errors"
+
+msgid "New test_question"
+msgstr ""
+
+msgid "New user"
+msgstr ""
+
+msgid "New user_badge"
+msgstr ""
+
+msgid "New user_subject"
+msgstr ""
+
+msgid "Next question"
+msgstr ""
+
+msgid "Notified"
+msgstr ""
+
+msgid "Notified:"
+msgstr ""
+
+msgid "Obtained experience"
+msgstr "Experiència obtinguda"
+
+msgid "Obtained experience:"
+msgstr "Experiència obtinguda:"
+
+msgid "Option"
+msgstr ""
+
+msgid "Option:"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Order:"
+msgstr ""
+
+msgid "Position"
+msgstr "Posició"
+
+msgid "Profile"
+msgstr "Perfil"
+
+msgid "Question"
+msgstr "Pregunta"
+
+#, fuzzy
+msgid "Question for exam: "
+msgstr "Pregunta"
+
+msgid "Question was successfully sent."
+msgstr "S'ha enviat la pregunta correctament."
+
+msgid "Question was successfully updated."
+msgstr "S'ha actualitzat la pregunta correctament."
+
+msgid "Question:"
+msgstr "Pregunta: "
+
+msgid "Questions"
+msgstr "Preguntes"
+
+msgid "Ranking"
+msgstr "Rànking"
+
+msgid "Registered at: "
+msgstr "Registrat el: "
+
+msgid "Report"
+msgstr "Reportar"
+
+msgid "Reports"
+msgstr "Reports"
+
+msgid "Results"
+msgstr "Resultats"
+
+msgid ""
+"Revise the syllabus and prepare some questions, if all of your mates do it, yo"
+"u will have a pile of study material."
+msgstr ""
+"Revisa el temari i prepara unes quantes preguntes, si ho feu tots els companys"
+", tindreum molt material per estudiar."
+
+msgid "Role"
+msgstr ""
+
+msgid "Role:"
+msgstr ""
+
+msgid "Send"
+msgstr "Enviar"
+
+msgid "Send questions"
+msgstr "Enviar preguntes"
+
+msgid "Sender"
+msgstr "Autor"
+
+msgid "Sender:"
+msgstr "Autor:"
+
+msgid "Sending question for"
+msgstr "Enviant pregunta per"
+
+msgid "Sent by: "
+msgstr "Enviat per: "
+
+msgid "Show"
+msgstr "Veure"
+
+msgid "Show badge"
+msgstr ""
+
+msgid "Show center"
+msgstr ""
+
+msgid "Show degree"
+msgstr ""
+
+msgid "Show exam"
+msgstr ""
+
+msgid "Show report"
+msgstr ""
+
+msgid "Show subject"
+msgstr ""
+
+msgid "Show test"
+msgstr ""
+
+msgid "Show test_question"
+msgstr ""
+
+msgid "Show user_badge"
+msgstr ""
+
+msgid "Show user_subject"
+msgstr ""
+
+msgid "Special"
+msgstr ""
+
+msgid "Special:"
+msgstr ""
+
+msgid ""
+"Start to do tests! When you have had many of these, do the test of errors, the"
+"n surely you will become an expert."
+msgstr ""
+"Comença a fer tests! Quan n'hagis fet un munt, fes el test d'errors, després s"
+"eràs tot un expert."
+
+msgid "Subject"
+msgstr "Assignatura"
+
+msgid "Subject:"
+msgstr "Assignatura:"
+
+msgid "Subjects"
+msgstr "Assignatures"
+
+msgid "Test"
+msgstr ""
+
+msgid "Test:"
+msgstr ""
+
+msgid "Test_questions"
+msgstr ""
+
+msgid "Tests"
+msgstr ""
+
+msgid "Tests Ranking"
+msgstr "Ranking dels tests"
+
+msgid "Theoretical explanation:"
+msgstr "Explicació teòrica"
+
+msgid "Unlocked date"
+msgstr ""
+
+msgid "Unlocked date:"
+msgstr ""
+
+msgid "Update profile"
+msgstr "Actualitzar perfil"
+
+msgid "User"
+msgstr ""
+
+msgid "User:"
+msgstr ""
+
+msgid "User_badges"
+msgstr ""
+
+msgid "User_subjects"
+msgstr ""
+
+msgid "Users"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "View profile"
+msgstr "Veure perfil"
+
+msgid "Your profile was successfully updated."
+msgstr "El teu perfil s'ha actualitzat correctament."
+
+msgid "questions sent."
+msgstr "preguntes enviades."
+
+msgid "tests done."
+msgstr "tests fets."

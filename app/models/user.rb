@@ -16,4 +16,7 @@ class User < ActiveRecord::Base
   has_many :subjects, through: :user_subjects
   has_many :exams, through: :subjects
 
+  def name
+    "#{first_name} #{last_name}"
+  end
 end

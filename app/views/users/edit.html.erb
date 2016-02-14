@@ -1,0 +1,9 @@
+<div class="page-header">
+  <%= link_to user_path(@user.id), :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    <%= _('Back') %>
+  <% end %>
+  <h1><%= _('Editing profile') %></h1>
+</div>
+
+<%= render 'form' %>

@@ -26,6 +26,11 @@ class ExamsController < ApplicationController
   def edit
   end
 
+  def show_ranking
+    @users = User.all
+    render "ranking", layout: false
+  end
+
   # POST /exams
   # POST /exams.json
   def create

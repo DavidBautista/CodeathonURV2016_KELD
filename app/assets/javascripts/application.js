@@ -26,3 +26,16 @@ window.setTimeout(function() {
         $(this).remove();
     });
 }, 3500);
+
+
+$(function () {
+    $('.testranking').colorbox();
+    $('.creatorranking').colorbox();
+
+    $('#badget-gallery').carousel({
+        interval: 10000
+    });
+
+    $('#badget-gallery').on('slid.bs.carousel', function() {
+    });
+});

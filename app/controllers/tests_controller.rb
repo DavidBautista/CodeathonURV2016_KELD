@@ -1,6 +1,23 @@
 class TestsController < ApplicationController
   before_action :set_test, only: [:show, :edit, :update, :destroy]
 
+  def start_test
+    exam_id = params[:exam_id]
+    questions = Question.where(exam_id: exam_id).limit(20).order("RAND()")
+    test = Test.create(exam_id: exam_id, user: current_user, special:false, obtained_experience: 0)
+    index = 1
+    questions.each do |question|
+      TestQuestion.create(test: test, question: question, order:index, answer: 0)
+      index += 1
+    end
+    redirect_to present_test_question_path(test_id: test.id, order: 1)
+  end
+
+  def finish_test
+    @test = Test.find(params[:test_id])
+
+  end
+
   # GET /tests
   # GET /tests.json
   def index

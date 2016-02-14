@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: app 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-13 14:21+0100\n"
-"PO-Revision-Date: 2016-02-13 14:21+0100\n"
+"POT-Creation-Date: 2016-02-14 15:37+0100\n"
+"PO-Revision-Date: 2016-02-14 15:37+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,3 +17,497 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "Active Exams"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Address:"
+msgstr ""
+
+msgid "Answer"
+msgstr ""
+
+msgid "Answer 1"
+msgstr ""
+
+msgid "Answer 1:"
+msgstr ""
+
+msgid "Answer 2"
+msgstr ""
+
+msgid "Answer 2:"
+msgstr ""
+
+msgid "Answer 3"
+msgstr ""
+
+msgid "Answer 3:"
+msgstr ""
+
+msgid "Answer:"
+msgstr ""
+
+msgid "Are you sure that you want delete this?"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Badge"
+msgstr ""
+
+msgid "Badge:"
+msgstr ""
+
+msgid "Badges"
+msgstr ""
+
+msgid "Based on experience"
+msgstr ""
+
+msgid "Center"
+msgstr ""
+
+msgid "Center:"
+msgstr ""
+
+msgid "Centers"
+msgstr ""
+
+msgid "Chick"
+msgstr ""
+
+msgid "Choose an exam to practise!"
+msgstr ""
+
+msgid "Correct"
+msgstr ""
+
+msgid "Correct answer"
+msgstr ""
+
+msgid "Correct answer:"
+msgstr ""
+
+msgid "Correct:"
+msgstr ""
+
+msgid "Country"
+msgstr ""
+
+msgid "Country:"
+msgstr ""
+
+msgid "Creators Ranking"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Degree"
+msgstr ""
+
+msgid "Degree:"
+msgstr ""
+
+msgid "Degrees"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Description:"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Editing badge"
+msgstr ""
+
+msgid "Editing center"
+msgstr ""
+
+msgid "Editing degree"
+msgstr ""
+
+msgid "Editing exam"
+msgstr ""
+
+msgid "Editing profile"
+msgstr ""
+
+msgid "Editing question"
+msgstr ""
+
+msgid "Editing report"
+msgstr ""
+
+msgid "Editing subject"
+msgstr ""
+
+msgid "Editing test"
+msgstr ""
+
+msgid "Editing test_question"
+msgstr ""
+
+msgid "Editing user_badge"
+msgstr ""
+
+msgid "Editing user_subject"
+msgstr ""
+
+msgid "Egg"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "End date"
+msgstr ""
+
+msgid "End date:"
+msgstr ""
+
+msgid "Error prohibited this user from being saved:"
+msgid_plural "Errors prohibited this badge from being saved:"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Exam"
+msgstr ""
+
+msgid "Exam:"
+msgstr ""
+
+msgid "Exams"
+msgstr ""
+
+msgid "Experience"
+msgstr ""
+
+msgid "Fail test success"
+msgstr ""
+
+msgid "Fail test success:"
+msgstr ""
+
+msgid "Finish test"
+msgstr ""
+
+msgid "First name"
+msgstr ""
+
+msgid "Global Ranking"
+msgstr ""
+
+msgid "Go to exam"
+msgstr ""
+
+msgid "Graduated Chick"
+msgstr ""
+
+msgid "Icon path"
+msgstr ""
+
+msgid "Icon path:"
+msgstr ""
+
+msgid "Incorrect"
+msgstr ""
+
+msgid "Last name"
+msgstr ""
+
+msgid "Level"
+msgstr ""
+
+msgid "Logout"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Name:"
+msgstr ""
+
+msgid "New Badge"
+msgstr ""
+
+msgid "New Center"
+msgstr ""
+
+msgid "New Degree"
+msgstr ""
+
+msgid "New Exam"
+msgstr ""
+
+msgid "New Question"
+msgstr ""
+
+msgid "New Report"
+msgstr ""
+
+msgid "New Subject"
+msgstr ""
+
+msgid "New Test"
+msgstr ""
+
+msgid "New Test question"
+msgstr ""
+
+msgid "New User"
+msgstr ""
+
+msgid "New User badge"
+msgstr ""
+
+msgid "New User subject"
+msgstr ""
+
+msgid "New badge"
+msgstr ""
+
+msgid "New center"
+msgstr ""
+
+msgid "New degree"
+msgstr ""
+
+msgid "New exam"
+msgstr ""
+
+msgid "New report"
+msgstr ""
+
+msgid "New subject"
+msgstr ""
+
+msgid "New test"
+msgstr ""
+
+msgid "New test of errors"
+msgstr ""
+
+msgid "New test_question"
+msgstr ""
+
+msgid "New user"
+msgstr ""
+
+msgid "New user_badge"
+msgstr ""
+
+msgid "New user_subject"
+msgstr ""
+
+msgid "Next question"
+msgstr ""
+
+msgid "Notified"
+msgstr ""
+
+msgid "Notified:"
+msgstr ""
+
+msgid "Obtained experience"
+msgstr ""
+
+msgid "Obtained experience:"
+msgstr ""
+
+msgid "Option"
+msgstr ""
+
+msgid "Option:"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Order:"
+msgstr ""
+
+msgid "Position"
+msgstr ""
+
+msgid "Profile"
+msgstr ""
+
+msgid "Question"
+msgstr ""
+
+msgid "Question for exam: "
+msgstr ""
+
+msgid "Question was successfully sent."
+msgstr ""
+
+msgid "Question was successfully updated."
+msgstr ""
+
+msgid "Question:"
+msgstr ""
+
+msgid "Questions"
+msgstr ""
+
+msgid "Ranking"
+msgstr ""
+
+msgid "Registered at: "
+msgstr ""
+
+msgid "Report"
+msgstr ""
+
+msgid "Reports"
+msgstr ""
+
+msgid "Results"
+msgstr ""
+
+msgid "Revise the syllabus and prepare some questions, if all of your mates do it, you will have a pile of study material."
+msgstr ""
+
+msgid "Role"
+msgstr ""
+
+msgid "Role:"
+msgstr ""
+
+msgid "Send"
+msgstr ""
+
+msgid "Send questions"
+msgstr ""
+
+msgid "Sender"
+msgstr ""
+
+msgid "Sender:"
+msgstr ""
+
+msgid "Sending question for"
+msgstr ""
+
+msgid "Sent by: "
+msgstr ""
+
+msgid "Show"
+msgstr ""
+
+msgid "Show badge"
+msgstr ""
+
+msgid "Show center"
+msgstr ""
+
+msgid "Show degree"
+msgstr ""
+
+msgid "Show exam"
+msgstr ""
+
+msgid "Show report"
+msgstr ""
+
+msgid "Show subject"
+msgstr ""
+
+msgid "Show test"
+msgstr ""
+
+msgid "Show test_question"
+msgstr ""
+
+msgid "Show user_badge"
+msgstr ""
+
+msgid "Show user_subject"
+msgstr ""
+
+msgid "Special"
+msgstr ""
+
+msgid "Special:"
+msgstr ""
+
+msgid "Start to do tests! When you have had many of these, do the test of errors, then surely you will become an expert."
+msgstr ""
+
+msgid "Subject"
+msgstr ""
+
+msgid "Subject:"
+msgstr ""
+
+msgid "Subjects"
+msgstr ""
+
+msgid "Test"
+msgstr ""
+
+msgid "Test:"
+msgstr ""
+
+msgid "Test_questions"
+msgstr ""
+
+msgid "Tests"
+msgstr ""
+
+msgid "Tests Ranking"
+msgstr ""
+
+msgid "Theoretical explanation:"
+msgstr ""
+
+msgid "Unlocked date"
+msgstr ""
+
+msgid "Unlocked date:"
+msgstr ""
+
+msgid "Update profile"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "User:"
+msgstr ""
+
+msgid "User_badges"
+msgstr ""
+
+msgid "User_subjects"
+msgstr ""
+
+msgid "Users"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "View profile"
+msgstr ""
+
+msgid "Your profile was successfully updated."
+msgstr ""
+
+msgid "questions sent."
+msgstr ""
+
+msgid "tests done."
+msgstr ""

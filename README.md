@@ -29,7 +29,11 @@ Els nostres valors afegits respecte d'altres plataformes són:
 
 ## Implementació durant la CodeathonURV2016
 De tota la nostra solució hem pogut implementar:
-- asdf
+- Login i Register d'usuaris funcional.
+- Els usuaris poden enviar preguntes del test a la plataforma.
+- Els usuaris poden realitzar els test, obtenir una puntuació i guanyar experiencia.
+- Els usuaris poden veure i editar els seus perfils.
+- Hi ha accés a rankings globals i locals del examen.
 
 ## Perspectiva futura del projecte
 En primer lloc, s'hauria de dur a terme tota la implementació de les altres funcionalitats de la web que no s'han pogut acabar durant aquesta jornada, ja que ens hem basat en implementar el més funcional per a tenir un prototip del projecte de cara a la presentació. Això inclouria, per exemple, la integració de les xarxes socials per compartir el progrés de l'usuari i els *badges* aconseguits.
@@ -54,9 +58,22 @@ $ git clone https://github.com/GaijinBushi/CodeathonURV2016_KELD.git
 ```
 #### 2. Instal·lar Ruby
 ```sh
-$ sudo apt-get install ruby
+$ sudo apt-get install rvm
+$ rvm install ruby-2.2.0
+$ rvm use ruby-2.2.0@testyourself
 ```
 #### 3. Realitzar un bundle install
 #### 4. Crear i migrar la base de dades
+```sh
+$ rake db:create
+$ rake db:migrate
+$ rake db:seed
+```
 #### 5. Arrancar el projecte
+```sh
+Arrancar en mode de development
+```
 #### 6. Accedir al navegador
+```sh
+$ http://localhost:3000/
+```
